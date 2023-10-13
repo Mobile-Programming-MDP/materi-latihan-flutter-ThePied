@@ -21,15 +21,14 @@ class FirstScreen ectends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: "Hallo Widget",
-        theme: ThemeData(primarySwatch: Colors.cyan),
-        home: Scaffold(
-          appBar: AppBar(title: const Text("Samuel Effendi")),
+    return Scaffold(
+       appBar: AppBar(
+        title: const Text("Samuel Effendi")
+        ),
           body: const Center(
             child: Text("Hallo Samuel"),
           ),
-        ));
+        );
   }
 
 }
