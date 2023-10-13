@@ -12,18 +12,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "Hallo Widget",
         theme: ThemeData(primarySwatch: Colors.red),
-        home: FirstScreen());
+        home: FirstScreen()
+        );
   }
 }
 
-class FirstScreen ectends StatelessWidget{
-  const FirstScreen((super.key));
+class FirstScreen extends StatelessWidget{
+  const FirstScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-        title: const Text("Samuel Effendi")
+        title: const Text("Samuel Effendi"),
+        actions: <Widget>[
+          IconButton(
+            onPressed:(){}, 
+            icon: const Icon(
+              Icons.search, 
+              color: Colors.white,
+          ))
+        ],
+        leading: IconButton(
+          //icon di kiri appbar
+          onPressed: (){},
+          icon: const Icon(
+            Icons.home,
+            color: Colors.white,
+          ),
+        ),
         ),
           body: const Center(
             child: Text("Hallo Samuel"),
